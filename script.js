@@ -49,7 +49,7 @@ cells.forEach((cell, index) => {
 		} else if (moveCount === 9) {
 			statusDiv.textContent = 'Ничья!'
 			overSound.play()
-			saveGameResult('Ничья', moveCount)
+			saveGameResult('Ничья!', moveCount)
 			updateGameHistory()
 			setTimeout(resetGame, 2000)
 		} else {
