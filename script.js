@@ -4,6 +4,7 @@ const currentPlayerDiv = document.getElementById('current-player')
 const xSound = document.getElementById('x-sound')
 const oSound = document.getElementById('o-sound')
 const winSound = document.getElementById('win-sound')
+const overSound = document.getElementById('over-sound')
 const resetButton = document.getElementById('reset-storage')
 const resetGameButton = document.getElementById('reset-game')
 
@@ -47,9 +48,10 @@ cells.forEach((cell, index) => {
 			setTimeout(resetGame, 2000)
 		} else if (moveCount === 9) {
 			statusDiv.textContent = 'Ничья!'
+			overSound.play()
 			saveGameResult('Ничья', moveCount)
 			updateGameHistory()
-			setTimeout(resetGame, 1000)
+			setTimeout(resetGame, 2000)
 		} else {
 			currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
 			updateCurrentPlayer()
