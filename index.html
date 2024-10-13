@@ -8,6 +8,8 @@
 	</head>
 	<body>
 		<div class="game-container">
+			<div id="current-player">Ходит: X</div>
+
 			<div id="board" class="board">
 				<div class="cell" data-cell></div>
 				<div class="cell" data-cell></div>
@@ -20,18 +22,25 @@
 				<div class="cell" data-cell></div>
 			</div>
 			<div id="status"></div>
+			<button id="reset-storage">Сбросить результаты</button>
+			<button id="reset-game">Начать заново</button>
 		</div>
-
+		<h2>Последние результаты:</h2>
+		<div class="scoreboard">
+			<ul id="game-history"></ul>
+		</div>
+		<audio id="x-sound" src="/assets/6a897efd83627af.mp3"></audio>
+		<audio id="o-sound" src="/assets/movement_01.mp3"></audio>
+		<audio id="win-sound" src="/assets/win.mp3"></audio>
 		<footer>
 			<p>
-				&copy; 2024. <a href="https://github.com/kGudvin">GitHub</a>. Логотип
-				курса:
+				&copy; 2024. <a href="https://github.com/kGudvin">kGudvin GitHub</a>
 				<a href="https://rs.school/courses/javascript-preschool-ru"
 					><img
 						src="https://rs.school/assets/rss-logo-CM8B7fA7.svg"
 						width="30"
 						height="30"
-						alt=""
+						alt="RSS"
 				/></a>
 			</p>
 		</footer>
